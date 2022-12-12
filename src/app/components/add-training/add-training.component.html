@@ -1,0 +1,9 @@
+<div *ngIf="training">
+    <h2>{{training.name}}</h2>
+    <div>
+        Name:
+        <input [(ngModel)]="training.name" placeholder="Name" />
+    </div>
+   
+   <button (click)="createTraining(training)" *ngIf="!training.id">Create</button>
+</div>

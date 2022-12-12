@@ -1,0 +1,27 @@
+<div *ngIf="exercise">
+    <h2>{{exercise.name}}</h2>
+    <div>
+        Name:
+        <input [(ngModel)]="exercise.name" placeholder="Name" />
+    </div>
+    <div>
+        Training id:
+        <input [(ngModel)]="exercise.trainingid" placeholder="TrainingId" />
+    </div>
+    <div>
+        BodyPart:
+        <input [(ngModel)]="exercise.bodyPart" placeholder="BodyPart" />
+    </div>
+    <div>
+        Reps:
+        <input [(ngModel)]="exercise.reps" placeholder="Reps" />
+    </div>
+    <div>
+        Series:
+        <input [(ngModel)]="exercise.series" placeholder="Series" />
+    </div>
+   <button (click)="updateExercise(exercise)" *ngIf="exercise.id">save</button>
+   <button (click)="deleteExercise(exercise)" *ngIf="exercise.id">Delete</button>
+   <button (click)="createExercise(exercise)" *ngIf="!exercise.id">Create</button>
+</div>
+

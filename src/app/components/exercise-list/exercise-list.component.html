@@ -1,0 +1,20 @@
+
+<h1>exercise list</h1>
+
+<a routerLink="exercisesedit">delete</a>
+<table>
+    <thead>
+      <th>id</th><th>trainingid</th><th>BodyPart</th><th>Name</th><th>series</th><th>reps</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let exercise of exercises">
+      <td>{{exercise.id}}</td>
+     <td>{{exercise.trainingid}}</td>
+      <td>{{exercise.bodyPart}}</td>
+      <td>{{exercise.name}}</td>
+      <td>{{exercise.series}}</td>
+      <td>{{exercise.reps}}</td>
+   
+    </tr>
+    </tbody>
+    </table>
