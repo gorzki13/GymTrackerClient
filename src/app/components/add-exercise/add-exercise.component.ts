@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Exercise } from 'src/app/models/Exercise';
+import { Training } from 'src/app/models/Training';
 import { ExerciseService } from 'src/app/servieces/exercise.service';
+import { TrainingService } from 'src/app/servieces/training.service';
 
 @Component({
   selector: 'app-add-exercise',
@@ -10,7 +12,11 @@ import { ExerciseService } from 'src/app/servieces/exercise.service';
 export class AddExerciseComponent implements OnInit {
   @Input() exercise ?:Exercise;
   @Output() exerciseAdded=new EventEmitter<Exercise[]>();
-  constructor(private exerciseService: ExerciseService){}
+  trainings:Training[]=[];
+  
+  constructor(private exerciseService: ExerciseService,private trainingService:TrainingService){
+    this.trainingService.getTrainings().subscribe((result: Training[])=>(this.trainings=result));
+  }
 
   ngOnInit():void
   {

@@ -2,14 +2,45 @@
 <a routerLink="trainingsedit">delete</a>
 <table>
     <thead>
-      <th>id</th><th>name</th>
+     <th>name</th>
     </thead>
-    <tbody>
-    <tr *ngFor="let training of trainings">
-      <td>{{training.id}}</td>
-     <td>{{training.name}}</td>
-      
+    <tbody *ngFor="let training of trainings">
+    <tr>
+    
+     <td><h3>{{training.name}}</h3></td>  
+    
+     <a class="btn-floating btn-large waves-effect waves-light blue" (click)="toggleContent(training)"><i class="material-icons">show</i></a>
     </tr>
+  <div *ngIf="training.display">
+    
+    <tr *ngFor="let exercise of exercises"> 
+     
+      <div *ngIf="training.id==exercise.trainingid">
+      
+        <tr>
+          <td>
+            {{exercise.bodyPart}}
+            
+          </td>
+          <td>
+            {{exercise.name}}
+          </td>
+          <td>
+            {{exercise.reps}}
+          </td>
+          <td>
+            {{exercise.series}}
+          </td>
+        </tr>
+
+
+
+
+      </div>
+    
+    
+    </tr>
+  </div>
     </tbody>
     </table>
 

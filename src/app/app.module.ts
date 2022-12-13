@@ -12,9 +12,16 @@ import { TrainingListEditableComponent } from './components/training-list-editab
 import { AddTrainingComponent } from './components/add-training/add-training.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { AddUserDataComponent } from './components/add-user-data/add-user-data.component';
+import { UserdataComponent } from './components/userdata/userdata.component';
+import { UserdataEditableComponent } from './components/userdata-editable/userdata-editable.component';
+import { NgSelectModule } from '@ng-select/ng-select';
+
+
 
 @NgModule({
   declarations: [
+   
     AppComponent,
     ExerciseListComponent,
     TrainingListComponent,
@@ -23,9 +30,13 @@ import { MenuComponent } from './components/menu/menu.component';
     TrainingListEditableComponent,
     AddTrainingComponent,
     NavbarComponent,
-    MenuComponent
+    MenuComponent,
+    AddUserDataComponent,
+    UserdataComponent,
+    UserdataEditableComponent
   ],
   imports: [
+    NgSelectModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

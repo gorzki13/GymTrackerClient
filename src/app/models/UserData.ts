@@ -1,7 +1,7 @@
 export class UserData{
 id?:number;
-userid?:number;
+userId?:number;
 height?:number;
 weight?:number;
-targetweight?:number;
+targetWeight?:number;
 }

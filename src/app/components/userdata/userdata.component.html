@@ -1,0 +1,20 @@
+<h1>USERDATA LIST</h1>
+
+<a routerLink="userdataedit">delete</a>
+<table>
+    <thead>
+      <th>id</th><th>userid</th><th>height</th><th>weight</th><th>targetweight</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ud of userdata">
+      <td>{{ud.id}}</td>
+     <td>{{ud.userId}}</td>
+      <td>{{ud.height}}</td>
+      <td>{{ud.weight}}</td>
+      <td>{{ud.targetWeight}}</td>
+  
+   
+    </tr>
+    </tbody>
+    </table>
+

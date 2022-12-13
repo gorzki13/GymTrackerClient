@@ -7,18 +7,19 @@ import { ExerciseListComponent } from './components/exercise-list/exercise-list.
 import { MenuComponent } from './components/menu/menu.component';
 import { TrainingListEditableComponent } from './components/training-list-editable/training-list-editable.component';
 import { TrainingListComponent } from './components/training-list/training-list.component';
-import { Exercise } from './models/Exercise';
+import { UserdataComponent } from './components/userdata/userdata.component';
+
 
 const routes: Routes = [
   {path: '', component : MenuComponent },
   {path: 'menu', component : MenuComponent },
-{path: 'exercises', component : ExerciseListComponent },
-{path: 'trainings', component : TrainingListComponent },
-{path: 'exercises/exercisesedit', component : ExerciseListEditableComponent },
-{path: 'trainings/trainingsedit', component : TrainingListEditableComponent },
-{path: 'exercisesadd', component : AddExerciseComponent },
-{path: 'trainingsadd', component : AddTrainingComponent },
-
+  {path: 'exercises', component : ExerciseListComponent },
+  {path: 'trainings', component : TrainingListComponent },
+  {path: 'exercises/exercisesedit', component : ExerciseListEditableComponent },
+  {path: 'trainings/trainingsedit', component : TrainingListEditableComponent },
+  {path: 'exercisesadd', component : AddExerciseComponent },
+  {path: 'trainingsadd', component : AddTrainingComponent },
+  {path: 'userdata', component : UserdataComponent }
 
 ];
 
