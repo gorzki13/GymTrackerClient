@@ -1,9 +1,11 @@
 <div *ngIf="training">
-    <h2>{{training.name}}</h2>
+    
     <div>
-        Name:
+      <H5>  Name:</H5>
         <input [(ngModel)]="training.name" placeholder="Name" />
     </div>
    
-   <button (click)="createTraining(training)" *ngIf="!training.id">Create</button>
+   
+   <div style="display: flex;
+   justify-content: center; margin-top: 20px;"><a routerLink="/trainings" (click)="createTraining(training)" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">add</i></a>
 </div>

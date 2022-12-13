@@ -1,0 +1,22 @@
+<div>
+    Target Weight kg:
+    <input [(ngModel)]="weight" placeholder="weight" />
+</div>
+<div>
+   Activity :
+    <ng-select [items]="actvitys" bindLabel="name" bindValue="id" placeholder="activity" [(ngModel)]="activity">
+           
+    </ng-select>
+</div>
+<div>
+    Goal :
+     <ng-select [items]="goals" bindLabel="name" bindValue="id" placeholder="activity" [(ngModel)]="goal">
+            
+     </ng-select>
+ </div>
+ <div style="display: flex;
+ justify-content: center; margin-top: 20px;"><a  (click)="calculate()" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">fitness_center</i></a>
+
+</div>
+
+<div><h5>{{text}}</h5> </div>

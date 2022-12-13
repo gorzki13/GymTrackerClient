@@ -1,19 +1,31 @@
-<h1>USERDATA LIST</h1>
 
-<a routerLink="userdataedit">delete</a>
+
+<div  >
+<div class="chart-container">
+  <canvas  id="MyChart" >{{ chart }}</canvas>
+</div>
+</div>
+
+<div style="display: flex;
+   justify-content: center; margin-top: 10px; ">
+<a  (click)="showYourChart()" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">show_chart</i></a>
+
+
+
+</div>
+
+
+
+
 <table>
     <thead>
-      <th>id</th><th>userid</th><th>height</th><th>weight</th><th>targetweight</th>
+      
     </thead>
     <tbody>
-    <tr *ngFor="let ud of userdata">
-      <td>{{ud.id}}</td>
-     <td>{{ud.userId}}</td>
-      <td>{{ud.height}}</td>
-      <td>{{ud.weight}}</td>
-      <td>{{ud.targetWeight}}</td>
-  
-   
+    <tr *ngFor="let ud of userdata">     
+      <td>{{ud.weight}}kg</td>
+      <td>{{ud.date | date}}</td>
+      <td><a routerLink="../" (click)="deleteUserdata(ud)" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">delete</i></a></td>
     </tr>
     </tbody>
     </table>

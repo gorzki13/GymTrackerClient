@@ -1,0 +1,14 @@
+
+<ng-select [items]="exercises" bindLabel="name" bindValue="reps" placeholder="Name" [(ngModel)]=" pickedexercise ">
+           
+</ng-select>
+
+<div>
+    Lift:
+    <input [(ngModel)]="liftkg" placeholder="kg" />
+</div>
+<div style="display: flex;
+ justify-content: center; margin-top: 20px;"><a  (click)="calculate()" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">fitness_center</i></a>
+
+</div>
+<div><h5>{{text}}</h5> </div>

@@ -1,15 +1,15 @@
 
-<h1>exercise list</h1>
 
-<a routerLink="exercisesedit">delete</a>
-<table>
+
+
+
+<table class="highlight">
     <thead>
-      <th>id</th><th>trainingid</th><th>BodyPart</th><th>Name</th><th>series</th><th>reps</th>
+     <th>BodyPart</th><th>Name</th><th>series</th><th>reps</th>
     </thead>
     <tbody>
     <tr *ngFor="let exercise of exercises">
-      <td>{{exercise.id}}</td>
-     <td>{{exercise.trainingid}}</td>
+    
       <td>{{exercise.bodyPart}}</td>
       <td>{{exercise.name}}</td>
       <td>{{exercise.series}}</td>
@@ -18,3 +18,6 @@
     </tr>
     </tbody>
     </table>
+   <div style="display: flex;
+   justify-content: center; margin-top: 90px; "><a  routerLink="exercisesedit" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">edit</i></a></div>
+    

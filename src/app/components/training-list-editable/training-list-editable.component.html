@@ -1,13 +1,14 @@
-<h1>Trainings list</h1>
+
 <table>
     <thead>
-      <th>id</th><th>name</th>
+  
     </thead>
     <tbody>
     <tr *ngFor="let training of trainings">
-      <td>{{training.id}}</td>
-     <td>{{training.name}}</td>
-     <td><button (click)="deleteTraining(training)">delete</button> </td>
+   
+     <td><h4>{{training.name}}</h4></td>
+     
+     <td><a routerLink="../" (click)="deleteTraining(training)" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">delete</i></a></td>
     </tr>
     </tbody>
     </table>

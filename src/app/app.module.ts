@@ -16,6 +16,9 @@ import { AddUserDataComponent } from './components/add-user-data/add-user-data.c
 import { UserdataComponent } from './components/userdata/userdata.component';
 import { UserdataEditableComponent } from './components/userdata-editable/userdata-editable.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { AdderComponent } from './components/adder/adder.component';
+import { CaloriecalculatorComponent } from './components/caloriecalculator/caloriecalculator.component';
+import { OnerepmaxcalculatorComponent } from './components/onerepmaxcalculator/onerepmaxcalculator.component';
 
 
 
@@ -33,14 +36,17 @@ import { NgSelectModule } from '@ng-select/ng-select';
     MenuComponent,
     AddUserDataComponent,
     UserdataComponent,
-    UserdataEditableComponent
+    UserdataEditableComponent,
+    AdderComponent,
+    CaloriecalculatorComponent,
+    OnerepmaxcalculatorComponent
   ],
   imports: [
     NgSelectModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

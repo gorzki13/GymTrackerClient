@@ -1,15 +1,13 @@
-<h1>Trainings list</h1>
-<a routerLink="trainingsedit">delete</a>
+
+
 <table>
-    <thead>
-     <th>name</th>
-    </thead>
+    
     <tbody *ngFor="let training of trainings">
     <tr>
     
-     <td><h3>{{training.name}}</h3></td>  
+     <td><h4>{{training.name}}</h4></td>  
     
-     <a class="btn-floating btn-large waves-effect waves-light blue" (click)="toggleContent(training)"><i class="material-icons">show</i></a>
+    <td> <a style="justify-content: center;" class="btn-floating btn-large waves-effect waves-light blue" (click)="toggleContent(training)"><i class="material-icons">list</i></a></td>
     </tr>
   <div *ngIf="training.display">
     
@@ -32,15 +30,11 @@
             {{exercise.series}}
           </td>
         </tr>
-
-
-
-
-      </div>
-    
-    
+      </div> 
     </tr>
   </div>
     </tbody>
     </table>
-
+   
+    <div style="display: flex;
+    justify-content: center; margin-top: 90px; "><a  routerLink="trainingsedit" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">edit</i></a></div>

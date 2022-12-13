@@ -1,16 +1,15 @@
 
 <div *ngIf="exercise">
-    <button (click)="createExercise(exercise)" *ngIf="!exercise.id">Create</button>
-    <h2>{{exercise.name}}</h2>
+   
     <div>
         Name:
         <input [(ngModel)]="exercise.name" placeholder="Name" />
     </div>
     <div>
-        Training id:
-        <input [(ngModel)]="exercise.trainingid" placeholder="Name" />
+       Training:
       
-        <ng-select [items]="trainings" bindLabel="name" bindValue="id" [(ngModel)]="exercise.trainingid">
+      
+        <ng-select [items]="trainings" bindLabel="name" bindValue="id" placeholder="Name" [(ngModel)]="exercise.trainingid">
            
           </ng-select>
  
@@ -28,8 +27,8 @@
         Series:
         <input [(ngModel)]="exercise.series" placeholder="Series" />
     </div>
-   <button (click)="updateExercise(exercise)" *ngIf="exercise.id">save</button>
-   <button (click)="deleteExercise(exercise)" *ngIf="exercise.id">Delete</button>
+    <div style="display: flex;
+    justify-content: center; margin-top: 20px;"><a routerLink="/exercises" (click)="createExercise(exercise)" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">add</i></a>
    
 </div>
 

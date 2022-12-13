@@ -1,1 +1,11 @@
-<p>add-user-data works!</p>
+<div *ngIf="userdata">
+    
+    <div>
+      <H5>  Weight:</H5>
+        <input [(ngModel)]="userdata.weight" placeholder="weight" />
+    </div>
+   
+   
+   <div style="display: flex;
+   justify-content: center; margin-top: 20px;"><a routerLink="/userdata" (click)="createUserdata(userdata)" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">add</i></a>
+</div>

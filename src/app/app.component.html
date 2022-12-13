@@ -1,22 +1,30 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<div *ngIf="router.url === '/exercises/exercisesedit'"><button (click)="initNewExercise()">Create new Exercise</button></div>
-<div *ngIf="router.url === '/trainings/trainingsedit'"><button (click)="initNewTraining()">Create new Training</button></div>
-<app-add-exercise [exercise]="exerciseToEdit" ></app-add-exercise>
-<app-add-training [training]="trainingToEdit"></app-add-training>
+<div style="display: flex;
+justify-content: left; margin-top: 10px; margin-right: 20px;">
+<a style="margin-right: 50px;"  routerLink="../" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">chevron_left</i></a>
+</div>
+<app-add-exercise *ngIf="router.url === '/exercises/exercisesedit/add'" [exercise]="exerciseToEdit" ></app-add-exercise>
+<app-add-training *ngIf="router.url === '/trainings/trainingsedit/add'" [training]="trainingToEdit"></app-add-training>
+<app-add-user-data *ngIf="router.url === '/userdata/add'" [userdata]="userdataToEdit"></app-add-user-data>
 
 
-<i class="large material-icons">insert_chart</i>
+<router-outlet  ></router-outlet>
+<div style="display: flex;
+   justify-content: center; margin-top: 10px; ">
+<a *ngIf="router.url === '/exercises/exercisesedit'"routerLink="/exercises/exercisesedit/add" (click)="initNewExercise()" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">add</i></a>
+
+<a *ngIf="router.url === '/trainings/trainingsedit' "routerLink="/trainings/trainingsedit/add" (click)="initNewTraining()" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">add</i></a>
+
+<a *ngIf="router.url === '/userdata' "routerLink="/userdata/add" (click)="initNewUserdata()" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">add</i></a>
+</div>
 
 
-<footer style="background-color: rgb(80, 78, 199);
-color: #fff;
-margin-bottom: 0px;
-text-align: center;
-position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;">
-    <p>Jakub Gorzkiewicz 2022</p>
-</footer>
+
+
+
+
+
+
+
+

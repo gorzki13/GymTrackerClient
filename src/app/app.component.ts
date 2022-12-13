@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Exercise } from './models/Exercise';
 import { Training } from './models/Training';
+import { UserData } from './models/UserData';
 import { ExerciseService } from './servieces/exercise.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class AppComponent {
  exercises:Exercise[]=[];
 exerciseToEdit?:Exercise;
 trainingToEdit?:Training;
+userdataToEdit?:UserData;
 constructor(private exerciseService:ExerciseService,public router: Router ){
   router=this.router;
 }
@@ -32,6 +34,10 @@ initNewExercise(){
 }
 initNewTraining(){
   this.trainingToEdit=new Training();
+
+}
+initNewUserdata(){
+  this.userdataToEdit=new UserData();
 
 }
 editExercise(exercise: Exercise){
