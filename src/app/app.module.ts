@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { AdderComponent } from './components/adder/adder.component';
 import { CaloriecalculatorComponent } from './components/caloriecalculator/caloriecalculator.component';
 import { OnerepmaxcalculatorComponent } from './components/onerepmaxcalculator/onerepmaxcalculator.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -47,6 +48,10 @@ import { OnerepmaxcalculatorComponent } from './components/onerepmaxcalculator/o
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
